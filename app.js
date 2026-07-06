@@ -68,6 +68,19 @@
     });
   });
 
+  // Click-to-play YouTube facade (avoids embed errors on load / file:// origin)
+  var facade = document.getElementById('videoFacade');
+  if (facade) {
+    facade.addEventListener('click', function () {
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + facade.dataset.id + '?autoplay=1&rel=0';
+      iframe.title = 'Koudelka';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      facade.parentNode.replaceChild(iframe, facade);
+    });
+  }
+
   var lbClose = document.getElementById('lbClose');
   if (lbClose) lbClose.addEventListener('click', closeLb);
   if (lb) lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
