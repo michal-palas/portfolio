@@ -85,6 +85,6 @@
   if (lbClose) lbClose.addEventListener('click', closeLb);
   if (lb) lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && lb.classList.contains('open')) closeLb();
+    if (lb && e.key === 'Escape' && lb.classList.contains('open')) closeLb();
   });
 })();

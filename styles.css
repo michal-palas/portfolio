@@ -255,7 +255,34 @@ section:nth-child(even) { background: var(--surface); }
 .site-footer { background: var(--navy-900); color: #b9c4d1; padding: 3rem 0; }
 .site-footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; align-items: center; }
 .site-footer a { color: #dbe4ee; }
-.footer-legal { display: flex; gap: 1.5rem; font-size: 0.9rem; }
+.footer-legal { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.9rem; align-items: center; }
+
+/* ---------- Legal pages (Impressum / Datenschutz) ---------- */
+.legal-topbar {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(245, 245, 242, 0.92); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.legal-topbar .container { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 64px; }
+.legal-page .brand { display: flex; }
+.legal-back { font-family: "IBM Plex Mono", monospace; font-size: 0.8rem; letter-spacing: 0.03em; color: var(--muted); white-space: nowrap; }
+.legal-back:hover { color: var(--accent); text-decoration: none; }
+.legal-topbar .nav-ctrl { position: static; }
+
+.legal { padding: 3.5rem 0 4.5rem; }
+.legal .container { max-width: 800px; }
+.legal h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin-top: 0.6rem; }
+.legal h2 {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.95rem;
+  text-transform: uppercase; letter-spacing: 0.06em; color: var(--navy);
+  margin-top: 2.4rem;
+}
+.legal p, .legal li { color: #34404d; margin-top: 0.85rem; line-height: 1.7; }
+.legal ul { margin-top: 0.85rem; padding-left: 1.2rem; }
+.legal li { margin-top: 0.35rem; }
+.legal address { font-style: normal; }
+.legal .lead { font-size: 1.05rem; color: var(--muted); }
+.legal .placeholder-note { margin-top: 1.6rem; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
