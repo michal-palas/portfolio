@@ -80,6 +80,8 @@ section:nth-child(even) { background: var(--surface); }
 .brand img { height: 38px; width: 38px; object-fit: contain; }
 .brand-text { font-family: "Archivo", sans-serif; font-weight: 700; color: var(--navy-900); font-size: 1.05rem; letter-spacing: 0.01em; }
 .brand-text span { color: var(--steel); font-weight: 600; }
+.nav-ctrl { display: flex; align-items: center; gap: 1rem; }
+.brand-banner { display: none; }
 .nav-links { display: flex; align-items: center; gap: 2rem; }
 .nav-links a { color: var(--ink); font-weight: 500; font-size: 0.95rem; }
 .nav-links a:hover { color: var(--accent); text-decoration: none; }
@@ -251,9 +253,19 @@ section:nth-child(even) { background: var(--surface); }
   .stats .container { grid-template-columns: repeat(2, 1fr); }
   .services-grid, .gallery { grid-template-columns: repeat(2, 1fr); }
   .skills-card { position: static; }
+
+  /* Mobile: the banner IS the header */
+  .site-header { position: relative; }
+  .nav { display: flex; align-items: center; gap: 0.6rem; height: auto; padding: 0.4rem 0.7rem; }
+  .brand { display: none; }
+  .brand-banner { display: block; flex: 1 1 auto; min-width: 0; }
+  .brand-banner img { width: 100%; display: block; }
+  .hero-banner { display: none; }
+  .nav-ctrl { flex: 0 0 auto; gap: 0.4rem; }
+
   .nav-links { display: none; }
   .nav-links.open {
-    display: flex; position: absolute; top: 68px; left: 0; right: 0;
+    display: flex; position: absolute; top: 100%; left: 0; right: 0; z-index: 55;
     flex-direction: column; gap: 0; background: var(--surface); border-bottom: 1px solid var(--line); padding: 0.5rem 1.5rem 1rem;
   }
   .nav-links.open a { padding: 0.7rem 0; border-top: 1px solid var(--line); }
