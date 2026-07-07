@@ -262,7 +262,7 @@ section:nth-child(even) { background: var(--surface); }
   .brand-banner img { width: 100%; display: block; }
   .hero-banner { display: none; }
   .nav-ctrl {
-    position: absolute; top: 0.55rem; right: 0.55rem; left: auto; z-index: 60;
+    position: absolute; bottom: 0.55rem; right: 0.55rem; left: auto; top: auto; z-index: 60;
     gap: 0.4rem; padding: 0.28rem 0.45rem; border-radius: 999px;
     background: rgba(245, 245, 242, 0.9); backdrop-filter: blur(6px);
     box-shadow: 0 2px 10px rgba(15, 37, 64, 0.25);
