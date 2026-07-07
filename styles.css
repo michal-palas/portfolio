@@ -248,6 +248,7 @@ section:nth-child(even) { background: var(--surface); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
+  .hero { padding-top: 2.25rem; }
   .hero .container, .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .hero-figure { order: -1; }
   .stats .container { grid-template-columns: repeat(2, 1fr); }
