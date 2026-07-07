@@ -263,9 +263,23 @@ section:nth-child(even) { background: var(--surface); }
   .hero-banner { display: none; }
   .nav-ctrl {
     position: absolute; bottom: 0.55rem; right: 0.55rem; left: auto; top: auto; z-index: 60;
-    gap: 0.4rem; padding: 0.28rem 0.45rem; border-radius: 999px;
-    background: rgba(245, 245, 242, 0.9); backdrop-filter: blur(6px);
-    box-shadow: 0 2px 10px rgba(15, 37, 64, 0.25);
+    gap: 0.5rem; align-items: center;
+  }
+  /* DE/EN: frameless, white for legibility over the dark banner */
+  .nav-ctrl .lang-toggle { background: transparent; border: 0; border-radius: 0; overflow: visible; }
+  .nav-ctrl .lang-toggle button {
+    color: rgba(255, 255, 255, 0.72); padding: 0.15rem 0.3rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+  }
+  .nav-ctrl .lang-toggle button[aria-pressed="true"] {
+    background: transparent; color: #fff;
+    text-decoration: underline; text-underline-offset: 3px;
+  }
+  /* Only the menu button keeps a background chip */
+  .nav-ctrl .nav-toggle {
+    background: rgba(245, 245, 242, 0.92); backdrop-filter: blur(6px);
+    box-shadow: 0 2px 10px rgba(15, 37, 64, 0.3);
+    border-radius: 999px; padding: 0.28rem; color: var(--navy-900);
   }
 
   .nav-links { display: none; }
